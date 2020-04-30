@@ -1,0 +1,80 @@
+1.to check version of database
+syntax:select version();
+2.to create database
+Syntax:create  database dbname;
+ex:create database testdb;
+4.to use database
+syntax:\c databasename
+ex:\c testdb
+5.to clear the screen
+\! cls
+6.to list databases
+syntax:\l
+DDL
+ 7.to create table 
+syntax:create table person(columnname1 datatype,columname2 datatype,......columnnamen datatype);
+ Ex :create table person(id int,name varchar(150),email varchar(200));
+8.To describe a table
+syntax:/d tablename
+Ex:/d person
+EX:Column |          Type          | Collation | Nullable | Default
+--------+------------------------+-----------+----------+---------
+ id     | integer                |           |          |
+ name   | character varying(150) |           |          |
+ email  | character varying(200) |
+
+9.to add column name
+syntax:alter table tablename add column columnname datatype;
+ Ex:alter table person add column age int;
+10.to rename the column name
+syntax:alter table tablename column oldcolumnname to newcolumnname; 
+Ex:alter table person rename column name to pname;
+11.to rename  the table name
+syntax:alter table oldtablename rename to new tablename;
+EX:alter table person rename to emp;
+ List of relations
+ Schema | Name | Type  |  Owner
+--------+------+-------+----------
+ public | emp  | table | postgre
+12.to rename the database name
+syntax:alter database olddbname rename to newdbname
+Ex:alter database testdb rename to test;
+
+13.to drop the column
+syntax:alter table tablename drop column columnname;
+Ex:alter table person drop column age;
+14.to drop the dbname
+syntax:drop database dbname;
+Ex:drop database testdb;
+
+15.to drop the tablename
+Syntax:drop table tablename
+Ex:drop table emp;
+
+DML
+17.insert into table_name(column_name1,column_name2.....column)values(value1,value2,value3...valuen);
+Ex:
+insert into person(id,name,email)values(1,'rahul','rahul@gmail.com');
+syntax: insert into table_name values(value1,value2,value3.....);
+Ex:insert into person values(1,'rahul','rahul@gmail.com');
+
+assignment
+create database name as idexcel
+create a table Empolyee table and
+column name datatype
+empId(pk) int
+ename varchar
+designation
+hiredate date Not Null
+sal double
+age  int 
+emailId varchar
+deptno  int
+mobileno bigint notnull
+
+insert 10 record
+deptno
+10,20,30,40
+designation
+software developer,tester,HR,clerk salesman
+ 
