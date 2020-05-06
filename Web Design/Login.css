@@ -1,0 +1,78 @@
+body{
+    background-color: rgb(238, 238, 154);
+    background-image: url("/image/daisy-5009532_960_720.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    overflow:hidden;
+}
+form{
+    /* border: 1px solid black; */
+    margin:20px;
+    padding:20px;
+    text-align:left;
+    width:450px;
+    height:450px;
+    background-color: rgb(83, 149, 236);
+    margin-top: 40px;
+    margin-left: 500px;
+    font-size: 25px;
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    /* text-decoration-color: white; */
+}
+input[type="text"],input[type="email"],input[type="password"]{
+    width:450px;
+    height:40px;
+    border-radius:5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    padding-left:10px;
+    background-color:white;
+    color:black;
+    /* border-color: rgb(151, 147, 147); */
+    /* text-decoration: grey; */
+}
+
+h4{
+    background-color: grey;
+    text-align: center;
+    width: 360px;
+    height: 30px;
+    padding-top: 10px;
+}
+#para1{
+    color:white;
+    text-align: left;
+}
+p{
+    color:white;
+    text-align: center;
+}
+#button{
+    background-color: rgb(59, 122, 240);
+    height: 30px;
+    width: 80px;
+    color: white;
+    text-align: center;
+    /* border-color: rgb(158, 184, 231); */
+    border-radius: 8px;
+    font-size: 15px;
+    
+    
+}
+input[type="button"]{
+    width: 300px;
+    margin-left: 70px;
+    height: 60px;
+    background-color: rgb(100, 226, 96);
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+    /* border-color: grey; */
+    font-size: 20px;
+}
+.content{
+    padding: 40px;
+    margin:100px;
+}

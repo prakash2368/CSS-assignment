@@ -1,0 +1,28 @@
+ul{
+    background-color: lightblue;
+    overflow: hidden;
+    margin: 0px;
+}
+body{
+    /* background-color: burlywood; */
+    background-image: url("/image/japanese-cherry-trees-324175__340.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+li{
+    float: left;
+    height: 50px;
+    margin-top: 25px;
+    margin-left: 40px;
+    overflow: hidden;
+}
+li a{
+    text-decoration: none;
+    color:grey;
+    padding:40px;
+    font-size:25px;
+}
+li a:hover{
+    background-color:honeydew;
+}

@@ -78,3 +78,73 @@ deptno
 designation
 software developer,tester,HR,clerk salesman
  
+DQL-data query langauage
+select
+the different way to retrive the data from the table;
+1.Projection
+2.Selection
+3.Join-retrival of data from mulitiple table simulantaneously.
+
+syntax:
+select * /[DISTINCT] COLUMN_NAME/Expression [Alias]
+From TABLE_NAME;
+
+select * from Empolyee;
+Ex:
+ empid | ename |    designation     |  hiredate  |  sal  | age |     emailid     | deptno |  mobileno
+-------+-------+--------------------+------------+-------+-----+-----------------+--------+-------------
+     1 | emp1  | software developer | 2000-01-11 |  5000 |  25 | emp1@gmail.com  |     10 |  8904382368
+     2 | emp2  | tester             | 2001-01-11 |  6000 |  26 | emp2@gmail.com  |     20 |  8904382361
+     3 | emp3  | Hr                 | 2002-01-11 |  7000 |  27 | emp3@gmail.com  |     30 |  8904382362
+     7 | emp7  | tester             | 2006-01-11 | 11000 |  31 | emp7@gmail.com  |     40 |  8904382367
+     9 | emp9  | saleman            | 2008-01-11 | 13000 |  33 | emp9@gmail.com  |     20 |  8904382369
+    10 | emp10 | software developer | 2002-01-11 | 14000 |  34 | emp10@gmail.com |     30 | 98807382368
+     4 | emp4  | clerk              | 2003-01-11 |  8000 |  28 | emp4@gmail.com  |     40 |  8904382364
+     5 | emp5  | saleman            | 2004-01-11 |  9000 |  29 | emp5@gmail.com  |     10 |  8904382365
+     8 | emp8  | clerk              | 2007-01-11 | 12000 |  32 | emp8@gmail.com  |     10 |  8904382368
+     6 | emp6  | software developer | 2005-01-11 | 10000 |  30 | emp6@gmail.com  |     30 |  8904382366
+
+*-select all data
+
+order of the execution:
+from
+select
+
+projection-selecting data only using column names.
+
+select ename,sal from Empolyee;
+ ename |  sal
+-------+-------
+ emp1  |  5000
+ emp2  |  6000
+
+ emp3  |  7000
+ emp7  | 11000
+ emp9  | 13000
+
+waQtd name,deptno,date of joining
+select ename,deptno,hiredate from Empolyee;
+
+waq to insert a more than one  record in the same query.
+insert into Empolyee values(1,'emp1' , 'software developer' , '2000-01-11' ,  5000 ,  25 , 'emp1@gmail.com',10,8904382368,98807382368);
+
+update:
+syntax:
+		update table_name set column_name=value;
+delete:
+syntax:
+		delete from table name;
+
+where clause:
+
+select * from table_name where condition;
+update tablename set column name=value where condition;
+
+order of the execution
+from 
+where 
+select
+ 
+in where clause condition checks for each and every record if condition is satisfied then record get executed. 
+
+ 
