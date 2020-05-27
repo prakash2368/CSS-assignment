@@ -1,0 +1,62 @@
+1) LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL ?
+ans-select * from Empolyee where sal is null;
+2)LIST ALL THE EMPLOYEES WHO DON’T HAVE A DEPT NO?
+ans-select * from Empolyee where deptno is null;
+3)LIST ALL THE SALESMEN IN DEPT 30?
+ans-select * from  Empolyee where designation='saleman' and  deptno='30';
+4)LIST ALL THE SALESMEN IN DEPT NUMBER 30 AND HAVING SALARY GREATER THAN 1500?
+ans-select * from  Empolyee where designation='saleman' and  deptno='30' and sal>1500;
+5)LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘S’ OR ‘A’?
+ans-select * from  Empolyee where ename like'S%' OR ename like 'A%';
+6)LIST ALL THE EMPLOYEES EXCEPT THOSE WHO ARE WORKING IN DEPT 10 & 20. ?
+ans-select * from  Empolyee where deptno not in (10,20);
+7)LIST THE EMPLOYEES WHOSE NAME DOES NOT START WITH ‘S’?
+ans-select * from  Empolyee where ename not like 'S%';
+8)LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10?
+ans-select ename from empolyee where mgr is not null and deptno=10;
+9)LIST ALL THE EMPLOYEES WHOSE SALARY IS NULL AND WORKING AS CLERK?
+ans-select * from Empolyee where sal is null and designation ='clerk';
+10) LIST ALL THE EMPLOYEES WHO DON’T HAVE A REPORTING MANAGER IN DEPTNO 10 OR 30?
+ans-select ename from empolyee where mgr is null and deptno in (10,30);
+11)LIST ALL THE SALESMEN IN DEPT 30 WITH SAL MORE THAN 2450?
+ans-select * from  Empolyee where designation='saleman' and  deptno='30' and sal>2450;
+12)LIST ALL THE ANALYST IN DEPT NUMBER 20AND HAVING SALARY GREATER THAN 2500?
+ans-select * from  Empolyee where designation='analyst' and  deptno='20' and sal>2500;
+13)LIST ALL THE EMPLOYEES WHOSE NAME STARTS WITH ‘M’ OR ‘J’?
+ans-select * from  Empolyee where ename like'M%' OR ename like 'J%';
+14)LIST ALL THE EMPLOYEES WITH ANNUAL SALARY EXCEPT THOSE WHO ARE WORKING IN DEPT 30 ?
+ans-select ename,sal* 12 annual_sal from  Empolyee where deptno != 30;
+15)LIST THE EMPLOYEES WHOSE NAME DOES NOT END WITH ‘ES’ OR ‘R’?
+ans-select * from empolyee where ename not like '%ES' OR ename not like '%R';
+16)LIST ALL THE EMPLOYEES WHO ARE HAVING REPORTING MANAGERS IN DEPT 10 ALONG WITH 10% HIKE IN SALARY?
+ans-select ename, 1.1 * sal hike from empolyee where mgr is not null and deptno=10   ;
+17)DISPLAY ALL THE EMPLOYEE WHO ARE ‘SALESMAN’S HAVING ‘E’AS THE LAST BUT ONE CHARACTER  IN ENAME BUT SALARY HAVING EXACTLY 4 CHARACTER?
+ans-select * from Empolyee  where designation='saleman' and ename like '%E_' and sal  like '____';
+18)DISPLAY ALL THE EMPLOYEE WHO ARE JOINED AFTER YEAR 81?
+ans-select * from Empolyee where hiredate > '0081-12-31';
+19)DISPLAY ALL THE EMPLOYEE WHO ARE JOINED IN FEB?
+ans-select ename  from Empolyee where cast(hiredate as varchar) like '____-02-__'; 
+20)LIST THE EMPLOYEES WHO ARE NOT WORKING AS MANAGERS AND CLERKS IN DEPT 10 AND 20 WITH A SALARY IN THE RANGE OF 1000 TO 3000?
+ans-select ename from Empolyee where designation!='manager' and designation!='clerk' and deptno  in (10,20)  and sal between 1000 and 3000;
+21)LIST THE EMPLOYEES WHOSE SALARY NOT IN THE RANGE OF 1000 TO 2000 AND WORKING IN DEPT 10,20 OR 30 EXCEPT ALL SALESMEN?
+ans-select ename from Empolyee where sal not between 1000 and 3000 and deptno in (10,20,30) and designation!='saleman';
+22)) LIST THE DEPARTMENT NAMES WHICH ARE HAVING LETTER ‘O’ IN THEIR LOCATIONS AS WELL AS THEIR DEPARTMENT NAMES?
+ans-select dname from empolyee where location like '%O%' and dname like '%O%';
+23)DISPLAY ALL THE EMPLOYEES WHOSE JOB HAS STRING ‘MAN’ IN IT.?
+ans-select ename from Empolyee where designation like '%MAN%' or designation like '%man%';
+24)LIST THE EMPLOYEES WHO ARE HIRED AFTER 82 AND BEFORE 87.?
+ans-select ename from empolyee where hiredate >'0082-12-31' and hiredate <'0087-01-01';
+25)WAQTD ALL THE DETAILS OF EMPLOYEES HIRED IN NOVEMBER AND DECEMBER.?
+ans-select ename from Empolyee where cast(hiredate as varchar) between '____-11-__' and '____-12-__';
+26)LIST ALL THE EMPLOYEE NAMES AND COMISSION FOR THOSE EMPLOYEES WHO EARN COMISSION MORE THAN THEIR SALARY?
+ans-select ename,comm from Empolyee where comm>sal;
+27)WAQTD NAME AND DESIGNATION FOR ALL THE EMPLOYEES HAVING REPORTING MANAGERS AND ALSO THRIE NAMES STARTING WITH ‘S’?
+ans-select ename,designation from empolyee where mgr is not null and ename like 'S%';
+28)WAQTD NAME AND SALARY OF ALL THE EMPLOYEES IF THEIR ANNUAL SALARY ENDS WITH ‘0’ ?
+ans-select ename,sal from Empolyee where cast(sal*12 as varchar) like'%0';
+29)WAQTD NAME OF THE EMPLOYEE HAVING ATLEAST 2L’s IN HIS NAME .?
+ans-select ename,sal from Empolyee where ename like '%L%L%';
+30)WAQTD NAME OF THE EMPLOYEES WHOS NAME STARTS WITH A ‘VOWEL’?
+ans-select ename from empolyee where ename like 'A%' or ename like 'E%' or ename like 'I%' or ename like 'O%' or ename like  'U%';
+
+
